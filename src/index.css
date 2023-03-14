@@ -1,0 +1,37 @@
+*{
+    padding: 0rem;
+    border: 0rem;
+    margin: 0rem;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+@media screen and (max-width:598px) {
+    html{
+      font-size: 45%;
+    }
+}
+/* css for movie component */
+.movie{
+    background-image: linear-gradient(100deg,navy,black);
+}
+/* Css for movie card */
+.movie-card{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 4px;
+}
+.movie-card:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+/* CSS for input field */
+input{
+    outline: none;
+    border: 1px solid purple;
+    width: 30rem;
+    height: 4rem;
+    border-radius: 2rem;
+    margin-top: 3rem;
+    font-size: 1.6rem
+}
