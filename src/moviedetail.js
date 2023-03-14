@@ -6,7 +6,7 @@ const Moviedetail = () => {
     const params = useParams();
      const [values,setValues] = useState([])
     const findmovie = useCallback(async()=>{
-        const api= `http://www.omdbapi.com/?i=tt3896198&apikey=d7cf4fbd&S=${params.api}`
+        const api= `https://www.omdbapi.com/?i=tt3896198&apikey=d7cf4fbd&S=${params.api}`
         const res = await fetch(api)
         const data = await res.json();
         setValues(data.Search);
@@ -22,8 +22,8 @@ const Moviedetail = () => {
         <p style={{"fontSize":"2.5rem","color":"white","fontFamily":"monospace","marginTop":"4rem","textAlign":"center"}}>Here are the details for your movie <span style={{"color":"yellow"}}>{params.api}</span></p>
         </div>
         <div style={{"display":"flex","flexDirection":"row","justifyContent":"center","width":"100vw","minWidth":"50rem","flexWrap":"wrap","marginTop":"5rem","alignItems":"center"}}>
-            {values?.length>=0?
-                values.map((ite,index)=>{
+            {values.length===0?<h1 style={{"color":"white"}}>Finding details, have patience!!</h1>:
+            values.map((ite,index)=>{
                     return(
                         ite.imdbID===params.id?
                         <div key={index} className='movie-card' style={{"margin":"2rem","height":"53rem","width":"35rem","display":"flex","flexDirection":"column","alignItems":"center","backgroundColor":"white"}}>
@@ -37,7 +37,6 @@ const Moviedetail = () => {
                         :null
                     )
                 })
-                :<h1 style={{"color":"white"}}>No Movies found!!</h1>
             }
         </div>
     </div>
