@@ -18,7 +18,7 @@ const Moviedetail = () => {
   return (
     <div className='movie' style={{"display":"flex","flexDirection":"column","justifyContent":"space-around","alignItems":"center","width":"100vw","minWidth":"50rem","height":"auto","minHeight":"100vh"}}>
         <div style={{"marginTop":"10rem"}}>
-        <h1 style={{"fontSize":"3.5rem","width":"40rem","fontFamily":"sans-serif","color":"white","marginLeft":"2rem"}}>Movie search app</h1>
+        <h1 style={{"fontSize":"3.5rem","width":"40rem","fontFamily":"sans-serif","color":"white","marginLeft":"2rem","textAlign":"center"}}>Movie search app</h1>
         <p style={{"fontSize":"2.5rem","color":"white","fontFamily":"monospace","marginTop":"4rem","textAlign":"center"}}>Here are the details for your movie <span style={{"color":"yellow"}}>{params.api}</span></p>
         </div>
         <div style={{"display":"flex","flexDirection":"row","justifyContent":"center","width":"100vw","minWidth":"50rem","flexWrap":"wrap","marginTop":"5rem","alignItems":"center"}}>
