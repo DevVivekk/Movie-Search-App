@@ -22,7 +22,7 @@ const Moviedetail = () => {
         <p style={{"fontSize":"2.5rem","color":"white","fontFamily":"monospace","marginTop":"4rem","textAlign":"center"}}>Here are the details for your movie <span style={{"color":"yellow"}}>{params.api}</span></p>
         </div>
         <div style={{"display":"flex","flexDirection":"row","justifyContent":"center","width":"100vw","minWidth":"50rem","flexWrap":"wrap","marginTop":"5rem","alignItems":"center"}}>
-            {values.length===0?<h1 style={{"color":"white"}}>Finding details, have patience!!</h1>:
+            {values?
             values.map((ite,index)=>{
                     return(
                         ite.imdbID===params.id?
@@ -37,6 +37,7 @@ const Moviedetail = () => {
                         :null
                     )
                 })
+                :<h1 style={{"color":"white"}}>Finding details, have patience!!</h1>
             }
         </div>
     </div>

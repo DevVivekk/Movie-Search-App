@@ -19,13 +19,13 @@ const Movie = () => {
         <input type={'search'} placeholder='Search Your Movie' onChange={(e)=>findmovie(e.target.value)} />
         </div>
         <div style={{"display":"flex","flexDirection":"row","justifyContent":"center","width":"100vw","minWidth":"50rem","flexWrap":"wrap","marginTop":"5rem"}}>
-            {values.length===0?
-               <h1 style={{"color":"white"}}>Loading your movies..</h1>:
+            {values?
                values.map((ite,id)=>{
                     return(
                         <MovieCard ite={ite} key={id} />
                     )
                 })
+                :<h1 style={{"color":"white"}}>Loading your movies..</h1>
             }
         </div>
     </div>
