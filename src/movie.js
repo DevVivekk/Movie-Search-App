@@ -4,7 +4,7 @@ import { MovieCard } from './moviecard'
 const Movie = () => {
      const [values,setValues] = useState([])
     const findmovie = async(item)=>{
-        const res = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=d7cf4fbd&s=${item?.length>1?`${item}`:'hanuman'}`)
+        const res = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=d7cf4fbd&s=${item?.length>1?`${item}`:'hanuman'}`)
         const data = await res.json();
         setValues(data.Search);
     }
